@@ -1,3 +1,3 @@
 .idea
-/venv/
+/venv_sensor_api/
 *__pycache__/
