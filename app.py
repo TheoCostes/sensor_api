@@ -1,4 +1,5 @@
 from datetime import date
+from typing import Optional
 
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
@@ -11,7 +12,7 @@ app = FastAPI()
 
 @app.get("/")
 def visit(
-    store_name: str, year: int, month: int, day: int, sensor_id: int | None = None
+    store_name: str, year: int, month: int, day: int, sensor_id: Optional[int] = None
 ) -> JSONResponse:
     # If the store is not in the dictionary
     if not (store_name in store_dict.keys()):
